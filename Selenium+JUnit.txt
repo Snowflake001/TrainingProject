@@ -1,0 +1,27 @@
+----------------------------Selenium+JUNIT------------------------------------
+Asset method:
+Assert.assertEquals(variable1,variable2);
+
+Iframes:
+driver.switchTo().frame(index);--for switching to frame using index
+driver.switchTo().parentFrame();--for switching back to parent frame
+driver.switchTo().frame("right");---for switching to frame using frame name
+
+-------------------------Multiple window handling:
+Set is used to store multiple window handles id.
+Set<String> id = driver.getWindowHandles();
+
+
+-------------------
+How to find hidden elements:
+javaScriptExecutor js = (JavaScriptExecutor)driver;
+js.executeScript("document.getElementById('id').value='selenium');
+
+----Enhance Automation Script---------
+HSSFWorkbook()--It is a top level object to create a sheets.
+HSSFSheet()--High level representation of worksheet in .xls 
+HSSFRow()--High level representation of row in a spreadsheet.
+HSSFCell()--High level representation of cell in a row in a spreadsheet.
+XSSFWorkbook()--High level representation of workbook..similar to HSSFWorkbook.
+XSSFSheet()---High level representation of worksheet.
+

@@ -1,0 +1,72 @@
+Locators
+---------------
+HTML/DHTML/XML ---> CLIENT SIDE SCRIPTING LANGUAGES
+
+ID --locating by id of element
+NAME -- locating by name of element
+LINKTEXT -- <a> this type of link and text are used in linktext.
+PARTIAL LINKTEXT
+CSS Selector--<1> tag and id --for eg. driver.findElement(By.cssSelector("input(tag)#email(id)")).sendKeys();
+            --<2> tag and class -- for eg.  driver.findElement(By.cssSelector("input(tag).inputtext(class)")).sendKeys();
+            --<3> tag and Attribute(any property like class,name,style etc) 
+                  for eg . driver.findElement(By.cssSelector("input(tag)[name=lastName](Attribute)")).sendKeys();
+            --<4> tag,class and Attribute -- for eg. driver.findElement(By.cssSelector("input.inputtext[name=lastName]")).sendKeys();--input=Tag,inputtext=class,name=lastName=Attribute.
+            --<5> InnerText-- for eg. driver.findElement(By.cssSelector("font:contains("password:")");
+
+TagName -- <input> such tags are used to find element.
+Xpath--It gives an complete address of webelement.
+     Types of Xpath
+     1--Absolute Xpath--It Provides Complete/Full Address of webelement.(Complete Xpath)
+        Always Starts with single slash./
+     2--Relative Xpath--It provides Shorter/Partial Address of Webelement.(Partial Xpath)
+        Always Starts with double slash.//
+
+How to Write Xpath manually:
+Abs Xpath : html/body/div/div/
+Relative Xpath - Steps to create--
+                 1. give double slash //.
+                 2. provide tagname or Star (*) 
+                 3. within [] brackets provide @attribute='value'.
+  for eg. //input[@id='email'] or //*[@id='email'] -- for fb email block.
+
+Xpath Methods : we can handle elements whose properties are dynamically changing.
+       1) Contains method: 
+      eg. //tagname[contains(@Attribute,'value')]
+       2) Starts-with()
+      eg. //tagname[starts-with(@attribute,'submit')]
+
+
+Selenium IDE :- A component of selenium (record and playback tool)
+
+Actions Class :
+1. clickAndhold(): for clicks without release at current mouse location.
+2. contextClick(): for right clicking.
+3. doubleClick() : perform double click at current mouse location.
+4. dragAndDrop(Source,target) : it drags the one of element from one position to another where it drops that element.
+5. dragAndDrop(Src,x-offset,y-offset):
+6. moveToElement(toElement) : moves the mouse to the middle of the element (MouseHover).
+7. release() : release the depressed left mouse button at current mouse location.
+
+
+xpath of Admin--/html/body/div[1]/div[2]/ul/li[1]/a/b
+xpath of usermng --//*[@id="menu_admin_UserManagement"]
+xpath of user --//*[@id="menu_admin_viewSystemUsers"]
+
+mouseover---moveToElement();
+RightClick --contextclick();
+
+drag and drop:
+site:http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+xpath 1 ---//*[@id="box2"]
+xpath2 ---//*[@id="box106"]
+
+Slider:
+https://jqueryui.com/slider/
+xpath://*[@id="slider"]/span
+
+note:check the frame first then perform operations.
+moveToElement(slider) ---> dragAndDropby(element,x,y).build.perform();
+
+Resizable:
+note:check the frame first then perform operations.
+moveToElement(resize) ---> dragAndDropby(element,x,y).build.perform();
